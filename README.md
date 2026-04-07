@@ -38,7 +38,7 @@ cd backend
 python ml/train_model.py
 ```
 
-## 5. Run the App
+##  Run the App
 
 ```bash
 # Terminal 1 - Backend
