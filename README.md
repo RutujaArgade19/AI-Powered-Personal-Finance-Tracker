@@ -1,8 +1,8 @@
-# 💰 AI-Powered Personal Finance Tracker
+#  AI-Powered Personal Finance Tracker
 
 A full-stack web application that uses ML to auto-categorize transactions, detect spending anomalies, and generate natural language insights.
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 finance-tracker/
@@ -11,30 +11,9 @@ finance-tracker/
 └── ml-service/        # scikit-learn ML models
 ```
 
-## 🚀 Tech Stack
 
-| Layer      | Tech                              |
-|------------|-----------------------------------|
-| Frontend   | React, TypeScript, Vite, Recharts |
-| Backend    | FastAPI, SQLAlchemy, PostgreSQL    |
-| ML         | scikit-learn, pandas, numpy       |
-| Auth       | JWT (python-jose)                 |
-| LLM        | OpenAI API / Claude API           |
-| Deploy     | Docker Compose                    |
 
----
-
-## ⚙️ Setup Instructions
-
-### Prerequisites
-- Node.js 18+
-- Python 3.10+
-- PostgreSQL 14+
-- OpenAI API Key (optional, for AI summaries)
-
----
-
-### 1. Clone & Install
+### Clone & Install
 
 ```bash
 # Install frontend deps
@@ -44,37 +23,22 @@ cd frontend && npm install
 cd ../backend && pip install -r requirements.txt
 ```
 
-### 2. Environment Variables
 
-**backend/.env**
-```
-DATABASE_URL=postgresql://user:password@localhost:5432/financedb
-SECRET_KEY=your-super-secret-key-here
-OPENAI_API_KEY=sk-...       # optional
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=30
-```
-
-**frontend/.env**
-```
-VITE_API_URL=http://localhost:8000
-```
-
-### 3. Database Setup
+## Database Setup
 
 ```bash
 cd backend
 python init_db.py
 ```
 
-### 4. Train ML Model (first time only)
+## Train ML Model 
 
 ```bash
 cd backend
 python ml/train_model.py
 ```
 
-### 5. Run the App
+## 5. Run the App
 
 ```bash
 # Terminal 1 - Backend
@@ -88,7 +52,7 @@ Visit `http://localhost:5173`
 
 ---
 
-## 📦 Docker (Recommended)
+## Docker 
 
 ```bash
 docker-compose up --build
@@ -96,26 +60,8 @@ docker-compose up --build
 
 ---
 
-## 🧠 ML Features
 
-### Transaction Categorization
-- Uses TF-IDF vectorizer + Logistic Regression
-- Trained on 1000+ labeled transaction descriptions
-- Categories: Food, Transport, Shopping, Entertainment, Bills, Health, Income, Other
-
-### Anomaly Detection
-- Isolation Forest algorithm
-- Flags transactions that are unusual vs. your personal spending history
-- Per-category thresholds
-
-### AI Summaries (OpenAI)
-- Weekly spending reports in plain English
-- Trend detection and personalized tips
-- Compare spending vs. previous periods
-
----
-
-## 📁 Project Structure Details
+## Project Structure Details
 
 ```
 backend/
